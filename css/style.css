@@ -1,0 +1,38 @@
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/* Globales */
+div.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+
+/* Header */
+header.barra{
+    background-color: #2e2e2e;
+}
+div.flex{
+    display: flex;
+}
+div.logo img{
+    width: 100px;
+    height: 100px;
+}
+nav.navegacion{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+nav.navegacion a{
+    text-decoration: none;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
