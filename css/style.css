@@ -4,6 +4,10 @@ html{
 *, *:before, *:after{
     box-sizing: inherit;
 }
+body{
+    background-color: #f0f8ea;
+    font-family: 'Roboto', sans-serif;
+}
 /* Globales */
 div.container{
     max-width: 1200px;
@@ -15,24 +19,127 @@ img{
 }
 
 /* Header */
-header.barra{
-    background-color: #2e2e2e;
+header{
+    background-color: #557e7c;
+    color: #ebedb3;
+    padding: 1em 0;
+    position: relative;
 }
-div.flex{
-    display: flex;
+header::after{
+    content: '';
+    clear: both;
+    display: block;
 }
-div.logo img{
-    width: 100px;
-    height: 100px;
-}
-nav.navegacion{
-    display: flex;
-    margin-left: auto;
-    align-items: center;
-}
-nav.navegacion a{
-    text-decoration: none;
-    margin-left: 20px;
+h1.logo{
+    float: left;
+    font-size: 1rem;
+    margin: 0;
     text-transform: uppercase;
-    color: #ffffff;
+    font-weight: 700;
+}
+h1.logo span{
+    font-weight: 400;
+}
+nav.site-nav{
+    top: 100%;
+    right: 0;
+    position: absolute;
+    background-color: #464655;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
+}
+nav.site-nav-open{
+    clip-path: circle(150% at top right);
+}
+nav.site-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav.site-nav li{
+    border-bottom: 1px solid #575766;
+}
+nav.site-nav li:last-child{
+    border-bottom: none;
+}
+nav.site-nav a{
+    color: #ebedb3;
+    display: block;
+    padding: 2em 6em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav.site-nav a:hover,
+nav.site-nav a:focus{
+    background-color: #e4b363;
+    color: #464655;
+}
+.site-nav-icon{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(255, 255, 255, .4);
+}
+/* Menu hamburguesa */
+div.menu-toggle{
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+}
+.menu-open div.hamburguesa{
+    transform: rotate(45deg);
+}
+.menu-open div.hamburguesa::before{
+    opacity: 0;
+}
+.menu-open div.hamburguesa::after{
+    transform: translateY(-3px) rotate(-90deg);
+}
+div.hamburguesa,
+div.hamburguesa::before,
+div.hamburguesa::after{
+    content: '';
+    display: block;
+    background-color: #ebedb3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+div.hamburguesa::before{
+    transform: translateY(-6px);
+}
+div.hamburguesa::after{
+    transform: translateY(3px);
+}
+@media (min-width: 768px) {
+    div.menu-toggle{
+        display: none;
+    }
+    nav.site-nav{
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        margin-right: 10px;
+        clip-path: initial;
+    }
+    nav.site-nav li{
+        display: inline-block;
+        border: none;
+    }
+    nav.site-nav a{
+        padding: 0;
+        margin-left: 3em;
+    }
+    i.site-nav-icon{
+        display: none;
+    }
+    nav.site-nav a:hover,
+    nav.site-nav a:focus{
+        background-color: transparent;
+    }
 }

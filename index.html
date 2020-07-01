@@ -4,31 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garage | Card Audio Desing</title>
-
+    <title>Garage | Car Audio Desing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header class="barra">
-        <div class="container flex">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="Logo empresa">
-                </a>
+    <header>
+        <div class="container">
+            <h1 class="logo">Garage <span>Car Audio Desing</span></h1>
+
+            <nav id="site-nav" class="site-nav">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa fa-home site-nav-icon"></i>Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cart-arrow-down site-nav-icon"></i>Productos</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-info site-nav-icon"></i>Acerca de</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-envelope site-nav-icon"></i>Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="menu-toggle" class="menu-toggle" onclick="CambiarClase()">
+                <div class="hamburguesa"></div>
             </div>
-                <nav class="navegacion">
-                    <a href="#">Inicio</a>
-                    <a href="#">Productos</a>
-                    <a href="#">Trabajos</a>
-                    <a href="#">Contacto</a>
-                </nav>
-            
         </div>
     </header>
 
+
+
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
